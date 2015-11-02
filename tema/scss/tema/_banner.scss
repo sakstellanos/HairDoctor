@@ -1,0 +1,76 @@
+.banner {
+    position: relative;
+
+    margin-top: 1em;
+}
+
+.copy {
+    margin: 0;
+
+    &__title {
+        margin: .5em 0 .3em;
+
+        color: $color2;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        span {
+            font-weight: 300;
+            text-transform: none;
+        }
+    }
+
+    &__description {
+        margin-bottom: 0;
+
+        font-size: .85em;
+    }
+
+    &__button {
+        display: inline-block;
+
+        padding: 0 1em;
+        border-radius: 3px;
+        margin: .5em 0;
+
+        color: #fff;
+        line-height: 2;
+        text-decoration: none;
+
+        background: linear-gradient(
+                    darken($color1, 10%),
+                    darken($color1, 20%)
+                    );
+
+        &:hover {
+            color: $color2;
+        }
+    }
+}
+
+@include desde(tablet) {
+    .copy {
+        position: absolute;
+        top: 50%;
+        left: 2em;
+
+        width: 40%;
+
+        color: $color1;
+
+        transform: translateY(-50%);
+
+        &__title {
+            color: $color1;
+            font-size: 2.5em;
+            line-height: 1;
+
+            span {
+                display: block;
+
+                font-size: .6em;
+                line-height: 1;
+            }
+        }
+    }
+}

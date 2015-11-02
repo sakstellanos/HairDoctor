@@ -1,0 +1,68 @@
+.menu {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    @include hasta(web) {
+        display: none;
+
+        background: lighten($color2, 10%);
+
+        &__link {
+            padding-left: 1em;
+
+            color: $color1;
+            line-height: 2.5;
+            text-decoration: none;
+
+            &:hover {
+                color: darken($color1, 10%);
+            }
+        }
+    }
+
+    @include desde(web) {
+        display: table;
+        float: right;
+
+        margin-top: 1.5em;
+
+        &__item {
+            float: left;
+        }
+
+        &__link {
+            padding: 0 1.5em;
+            border-right: 1px solid rgba(#fff, .3%);
+
+            color: #fff;
+            font-family: $header--font-family;
+            font-weight: 300;
+            line-height: 2;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            opacity: .7;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
+#mostrar-menu {
+    padding-left: 1em;
+
+    color: $color1;
+    line-height: 2.5;
+
+    background: $color2;
+    cursor: pointer;
+
+    @include desde(web) {
+        display: none;
+    }
+}

@@ -1,0 +1,26 @@
+.servicio {
+    margin-bottom: 3em;
+
+    text-align: center;
+
+    &__img {
+        width: 15%;
+        border-radius: 50%;
+
+        background: $color1;
+        opacity: .7;
+
+        @include desde(tablet) {
+            width: 20%;
+            margin-bottom: 1em;
+        }
+    }
+
+    &__title {
+        margin: .3em 0;
+    }
+
+    &__description {
+        font-size: .85em;
+    }
+}
